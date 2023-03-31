@@ -45,7 +45,6 @@ window.onload = () => {
     return fetch(`https://api.genderize.io/?name=${value}`)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
         if (response.count == 0) throw new Error('please enter valid name!');
         return response;
       })
